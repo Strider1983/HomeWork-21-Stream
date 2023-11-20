@@ -1,4 +1,4 @@
-package ru.listset.collections.exeptions;
+package ru.skypro.Streams.exeptions;
 
 public class EmployeeNotFoundException extends RuntimeException{
     public EmployeeNotFoundException(String message) {

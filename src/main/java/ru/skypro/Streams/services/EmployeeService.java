@@ -1,6 +1,6 @@
-package ru.listset.collections.services;
+package ru.skypro.Streams.services;
 
-import ru.listset.collections.model.Employee;
+import ru.skypro.Streams.model.Employee;
 
 import java.util.List;
 import java.util.Map;

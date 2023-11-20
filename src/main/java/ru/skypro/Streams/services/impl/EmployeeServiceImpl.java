@@ -1,17 +1,32 @@
-package ru.listset.collections.services.impl;
+package ru.skypro.Streams.collections.services.impl;
 
+import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
-import ru.listset.collections.exeptions.EmployeeAlreadyAddedException;
-import ru.listset.collections.exeptions.EmployeeNotFoundException;
-import ru.listset.collections.exeptions.EmployeeStorageIsFullException;
-import ru.listset.collections.model.Employee;
-import ru.listset.collections.services.EmployeeService;
+import ru.skypro.Streams.exeptions.EmployeeAlreadyAddedException;
+import ru.skypro.Streams.exeptions.EmployeeNotFoundException;
+import ru.skypro.Streams.exeptions.EmployeeStorageIsFullException;
+import ru.skypro.Streams.model.Employee;
+import ru.skypro.Streams.services.EmployeeService;
 
 import java.util.*;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
-    private final int maxEmployeesNumber = 7;
+    private final int maxEmployeesNumber = 150;
+    @PostConstruct
+    public void initEmployees() {
+        add("Petr", "Pavlov", 120000, 1);
+        add("Fedor", "Swarz", 87000, 1);
+
+        add("Igor", "Danov", 135000, 3);
+        add("Nik", "Fest", 113000, 3);
+        add("Mikhail", "Shestov", 280000, 3);
+
+        add("Alex", "Nemov", 210000, 8);
+        add("Vlad", "Egorov", 185000, 8);
+        add("Stepan", "Ivanov", 94000, 8);
+        add("Ivan", "Petrov", 167000, 8);
+    }
 
     private final Map<String, Employee> employees = new HashMap<>();
     @Override

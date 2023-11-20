@@ -1,11 +1,11 @@
-package ru.listset.collections.controller;
+package ru.skypro.Streams.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import ru.listset.collections.model.Employee;
-import ru.listset.collections.services.EmployeeService;
+import ru.skypro.Streams.model.Employee;
+import ru.skypro.Streams.services.EmployeeService;
 
 import java.util.List;
 import java.util.Map;

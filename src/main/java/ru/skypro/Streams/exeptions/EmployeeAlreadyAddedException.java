@@ -1,4 +1,4 @@
-package ru.listset.collections.exeptions;
+package ru.skypro.Streams.exeptions;
 
 public class EmployeeAlreadyAddedException extends RuntimeException{
     public EmployeeAlreadyAddedException(String message) {

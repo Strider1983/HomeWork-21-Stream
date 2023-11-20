@@ -1,4 +1,4 @@
-package ru.listset.collections.model;
+package ru.skypro.Streams.model;
 
 import java.util.Objects;
 
