@@ -15,7 +15,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     private final Map<String, Employee> employees = new HashMap<>();
     @Override
-    public Employee add(String firstName, String lastName) {
+    public Employee add(String firstName, String lastName, Integer salary, Integer department) {
         if (employees.size() >= maxEmployeesNumber) {
             throw new EmployeeStorageIsFullException("Достигнуто максимальное число сотрудников");
         }
@@ -23,7 +23,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             throw new EmployeeAlreadyAddedException("Сотрудник с именем " + firstName + " и фамилией " + lastName + " уже есть в списке");
         }
 
-        Employee employee = new Employee(firstName, lastName);
+        Employee employee = new Employee(firstName, lastName, salary, department);
         employees.put(getKey(employee), employee);
         return employee;
     }
